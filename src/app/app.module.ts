@@ -13,7 +13,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { OffersComponent } from './offers/offers.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule, FormGroup } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,15 @@ import { ContactComponent } from './contact/contact.component';
     AboutUsComponent,
     ContactComponent
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    I18nModule
+    I18nModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
