@@ -1,17 +1,6 @@
 
     
-    <!-- ***** Preloader Start ***** 
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>-->
-    <!-- ***** Preloader End ***** -->
+    
     
     
     <!-- ***** Header Area Start ***** -->
@@ -21,15 +10,17 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a routerLink="" class="logo">Car Rental<em> Website</em></a>
+                        <a routerLink="" class="logo"><em> BATUMI</em>Car Rental</a>
+                        
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a routerLink="" class="active">Home</a></li>
+                            <li><a routerLink="/Home" [routerLinkActive]="['active']">Home</a></li>
                             
-                            <li><a routerLink="/Offers">Offers</a></li>
-                            <li><a routerLink="/AboutUs">About Us</a></li>
-                            <li><a routerLink="/Contact">Contact</a></li> 
+                            <li><a routerLink="/Offers" [routerLinkActive]="['active']">Offers</a></li>
+                            <li><a routerLink="/AboutUs" [routerLinkActive]="['active']">About Us</a></li>
+                            <li><a routerLink="/Contact" [routerLinkActive]="['active']">Contact</a></li> 
+                            <app-select-language></app-select-language>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import CarRentData from '../../assets/data.json'
 
 @Component({
   selector: 'app-offers',
@@ -13,36 +15,21 @@ export class OffersComponent implements OnInit {
   title = 'appBootstrap';
   ChosenCarForm!: FormGroup;
   closeResult = "";
-  carRentList = [
-    {
-     id: "1",
-     pickUpLocation: "Aiman",
-     ReturnLocation: "Rahmat", 
-     pickedDateTime: "aimanrahmat",
-     returnDateTime: "aimanrahmat@gmail.com",
-     email: "aimanrahmat@gmail.com",
-     phone: "aimanrahmat@gmail.com"
-    },
-    {
-      id: "2",
-      pickUpLocation: "Aiman2",
-      ReturnLocation: "Rahmat", 
-      pickedDateTime: "aimanrahmat",
-      returnDateTime: "aimanrahmat@gmail.com",
-      email: "aimanrahmat@gmail.com",
-      phone: "aimanrahmat@gmail.com"
-    },
-    {
-     id: "12",
-     pickUpLocation: "Aiman3",
-     ReturnLocation: "Rahmat", 
-     pickedDateTime: "aimanrahmat",
-     returnDateTime: "aimanrahmat@gmail.com",
-     email: "aimanrahmat@gmail.com",
-     phone: "aimanrahmat@gmail.com"
-    }];
+  isUpdateData: boolean = false;
+  public browserLang: any;
+  carRentList: any;
 
-  constructor(private modalService: NgbModal,private fb: FormBuilder) { }
+
+  constructor(private modalService: NgbModal,
+    private fb: FormBuilder,
+    private translate: TranslateService) { 
+      translate.onLangChange.subscribe(lang=>{
+        this.browserLang = lang;
+        this.carRentList = CarRentData[this.browserLang.lang];
+        this.isUpdateData = true;
+      })
+      
+    }
 
   ngOnInit(): void {
     this.ChosenCarForm = this.fb.group({
@@ -51,6 +38,17 @@ export class OffersComponent implements OnInit {
       pickedDateTime: [''],
       returnDateTime: ['']
      });
+    
+     if (!this.isUpdateData) {
+       this.carRentList = CarRentData[this.translate.currentLang];
+     }
+
+     //this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      //this.browserLang = event.lang
+     // console.warn(event);
+    //});
+     
+     
   }
 
   open(content: any, carRent:any) {
