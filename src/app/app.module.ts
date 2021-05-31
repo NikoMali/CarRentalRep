@@ -32,7 +32,7 @@ import { FormsModule, ReactiveFormsModule, FormGroup } from '@angular/forms';
     
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     I18nModule,
     NgbModule,
