@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
@@ -22,7 +23,8 @@ export class OffersComponent implements OnInit {
 
   constructor(private modalService: NgbModal,
     private fb: FormBuilder,
-    private translate: TranslateService) { 
+    private translate: TranslateService, 
+    private http: HttpClient) { 
       translate.onLangChange.subscribe(lang=>{
         this.browserLang = lang;
         this.carRentList = CarRentData[this.browserLang.lang];
@@ -83,6 +85,14 @@ export class OffersComponent implements OnInit {
   onSubmit() {
     this.modalService.dismissAll();
     console.log("res:", this.ChosenCarForm.getRawValue());
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    this.http.post('https://formspree.io/f/mrgrqake',
+        { name: "CarRentalClient", replyto: "nino.nino.saqidze@gmail.com", message: "momaqiravee jigro" },
+        { 'headers': headers }).subscribe(
+          response => {
+            console.log(response);
+          }
+        );
    }
 
 }
