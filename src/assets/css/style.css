@@ -427,6 +427,7 @@ header
     height: 80px;
     box-shadow: none;
     text-align: center;
+    width: fit-content;
   }
   .header-area .container {
     padding: 0px;
@@ -1173,8 +1174,8 @@ body {
   /* border-radius: 5px; */
 }
 
-@media (max-width: 992px) {
-
+@media screen and (max-width: 992px) {
+ 
   .main-banner .caption h2 {
     font-size: 64px;
   }

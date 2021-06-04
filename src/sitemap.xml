@@ -1,8 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?><urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>http://localhost:4200/</loc></url>
-<url><loc>http://localhost:4200/AboutUs</loc></url>
-<url><loc>http://localhost:4200/Contact</loc></url>
-<url><loc>http://localhost:4200/Home</loc></url>
-<url><loc>http://localhost:4200/Offers</loc></url>
-<url><loc>http://localhost:4200/contact.html</loc></url>
-<url><loc>http://localhost:4200/testimonials.html</loc></url></urlset>
+<url><loc>http://www.batumicarrental.tk/</loc></url>
+<url><loc>http://www.batumicarrental.tk/en</loc></url>
+<url><loc>http://www.batumicarrental.tk/en/aboutus</loc></url>
+<url><loc>http://www.batumicarrental.tk/en/contact</loc></url>
+<url><loc>http://www.batumicarrental.tk/en/home</loc></url>
+<url><loc>http://www.batumicarrental.tk/en/offers</loc></url>
+<url><loc>http://www.batumicarrental.tk/en/contact</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru/aboutus</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru/contact</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru/home</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru/offers</loc></url>
+<url><loc>http://www.batumicarrental.tk/ru/contact</loc></url></urlset>

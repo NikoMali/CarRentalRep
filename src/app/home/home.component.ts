@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   IsActivePreloader: boolean = true;
 
   constructor( private meta: Meta,
-    private titleService: Title, private translate: TranslateService) { 
+    private titleService: Title, public translate: TranslateService) { 
      // this.ngOnInit()
     }
 

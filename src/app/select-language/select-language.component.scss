@@ -1,0 +1,14 @@
+.LangName{
+    color: white;
+    margin-right: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.LangName:nth-child(odd){
+    border-right: 1px solid white;
+    padding-right: 4px;
+}
+
+.active.LangName{
+    color: #ed563b!important;
+}
