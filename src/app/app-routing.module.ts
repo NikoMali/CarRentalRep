@@ -6,11 +6,16 @@ import { HomeComponent } from './home/home.component';
 import { OffersComponent } from './offers/offers.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'Home', component: HomeComponent },
-  { path: 'Offers', component: OffersComponent },
-  { path: 'AboutUs', component: AboutUsComponent },
-  { path: 'Contact', component: ContactComponent }
+  { path: 'en', component: HomeComponent },
+  { path: 'en/Home', component: HomeComponent },
+  { path: 'en/Offers', component: OffersComponent },
+  { path: 'en/AboutUs', component: AboutUsComponent },
+  { path: 'en/Contact', component: ContactComponent },
+  { path: 'ru', component: HomeComponent },
+  { path: 'ru/Home', component: HomeComponent },
+  { path: 'ru/Offers', component: OffersComponent },
+  { path: 'ru/AboutUs', component: AboutUsComponent },
+  { path: 'ru/Contact', component: ContactComponent }
 ];
 
 @NgModule({

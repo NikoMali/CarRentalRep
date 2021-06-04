@@ -15,11 +15,11 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a routerLink="/Home" [routerLinkActive]="['active']">Home</a></li>
+                            <li><a routerLink="/{{translate.currentLang}}/Home" [routerLinkActive]="['active']">Home</a></li>
                             
-                            <li><a routerLink="/Offers" [routerLinkActive]="['active']">Offers</a></li>
-                            <li><a routerLink="/AboutUs" [routerLinkActive]="['active']">About Us</a></li>
-                            <li><a routerLink="/Contact" [routerLinkActive]="['active']">Contact</a></li> 
+                            <li><a routerLink="/{{translate.currentLang}}/Offers" [routerLinkActive]="['active']">Offers</a></li>
+                            <li><a routerLink="/{{translate.currentLang}}/AboutUs" [routerLinkActive]="['active']">About Us</a></li>
+                            <li><a routerLink="/{{translate.currentLang}}/Contact" [routerLinkActive]="['active']">Contact</a></li> 
                             <app-select-language></app-select-language>
                         </ul>        
                         <div class='menu-trigger'>

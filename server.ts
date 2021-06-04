@@ -8,6 +8,9 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
+import 'localstorage-polyfill'
+global['localStorage'] = localStorage;
+
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -56,7 +59,6 @@ function run(): void {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
-
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
 // The below code is to ensure that the server is run only when not requiring the bundle.

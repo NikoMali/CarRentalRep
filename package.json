@@ -30,6 +30,7 @@
     "bootstrap": "^5.0.1",
     "express": "^4.15.2",
     "jquery": "^3.6.0",
+    "localstorage-polyfill": "^1.0.1",
     "ngx-translate-cache": "^9.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
