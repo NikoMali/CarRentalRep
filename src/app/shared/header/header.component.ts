@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +10,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
   
    isActiveMenuTrigger: boolean = false;
-  constructor(public translate: TranslateService) { }
+   enLang: string = "";
+   ruLang: string = "";
+  constructor(public translate: TranslateService,private router: Router) {
+       this.ruLang = this.router.url.replace('en', 'ru').toString();
+       this.enLang = this.router.url.replace('ru', 'en').toString();
+   }
 
   ngOnInit(): void {
   }
@@ -22,4 +28,14 @@ export class HeaderComponent implements OnInit {
       this.isActiveMenuTrigger = true;
     }
   }
+
+  public getCurrentUrl(lang:any){
+    if (lang == 'ru') {
+      
+      this.router.navigateByUrl(this.router.url.replace('en', lang));
+    }
+    else{
+      this.router.navigateByUrl(this.router.url.replace('ru', lang));
+    }
+  } 
 }

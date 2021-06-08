@@ -10,7 +10,11 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a routerLink="/{{translate.currentLang}}" class="logo"><em> BATUMI</em>Car Rental</a>
+                        <a routerLink="/{{translate.currentLang}}" class="logo"><em>BATUMI </em>Car Rental</a>
+                        <div class="mobileLang">
+                            <a [className]="'en' === translate.currentLang ? 'active' : ''" href="{{enLang}}">en</a>
+                            <a [className]="'ru' === translate.currentLang ? 'active' : ''" href="{{ruLang}}">ru</a>
+                        </div>
                         
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -25,6 +29,7 @@
                         <div  (click) = menuTrigger() [className]="isActiveMenuTrigger  ? 'menu-trigger active' : 'menu-trigger'" >
                             <span>Menu</span>
                         </div>
+
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
